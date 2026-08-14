@@ -4,11 +4,8 @@ body, html {
     overflow-x: hidden;
 }
 
-/* 
-  Estilos de la Splash Screen
-  Utilizamos un truco con box-shadow masivo para crear un fondo blanco 
-  con un agujero transparente en el centro que irá creciendo.
-*/
+/*-- Splash Screen Animada --*/ 
+
 .splash-screen {
     position: fixed;
     top: 50%;
@@ -25,7 +22,7 @@ body, html {
     pointer-events: none;
 }
 
-/* Clase que se agregará por JS para iniciar la animación */
+
 .splash-screen.animate {
     animation: reveal 0.5s ease-in-out forwards;
 }
