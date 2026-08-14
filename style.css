@@ -1,1 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
+/* 
+  Estilos de la Splash Screen
+  Utilizamos un truco con box-shadow masivo para crear un fondo blanco 
+  con un agujero transparente en el centro que irá creciendo.
+*/
+.splash-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: transparent;
+    /* Un sombreado blanco gigante que cubre toda la pantalla inicialmente */
+    box-shadow: 0 0 0 200vmax white;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    /* Evitar que bloquee clics una vez que se oculte, aunque lo quitaremos con JS también */
+    pointer-events: none;
+}
+
+/* Clase que se agregará por JS para iniciar la animación */
+.splash-screen.animate {
+    animation: reveal 0.5s ease-in-out forwards;
+}
+
+/* La animación que agranda el círculo transparente */
+@keyframes reveal {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        /* Aumentamos el ancho y alto a un tamaño mayor que la pantalla */
+        width: 300vmax;
+        height: 300vmax;
+    }
+}
