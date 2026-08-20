@@ -10,9 +10,36 @@
 
     <div id="splash-screen" class="splash-screen"></div>
 
-    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #111; color: white; font-family: sans-serif;">
-        <h1>Misael Vergara</h1>
-    </div>
+    <!-- Header / Barra de navegación -->
+    <header class="header">
+        <nav class="nav-buttons">
+            <button class="nav-btn">Botón 1</button>
+            <button class="nav-btn">Botón 2</button>
+            <button class="nav-btn">Botón 3</button>
+            <button class="nav-btn">Botón 4</button>
+        </nav>
+    </header>
+
+    <!-- Sección principal / Cuerpo con imagen de fondo -->
+    <main class="main-section">
+        <!-- Imagen de fondo que cubre todo el ancho y alto de la sección -->
+        <!-- Reemplaza "tu-imagen.jpg" por el nombre de tu archivo de imagen -->
+        <img class="hero-bg-img" src="fondo.png" alt="Fondo" onerror="this.style.display='none'">
+        
+        <!-- Capa de superposición para mejorar el contraste y legibilidad del texto -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido principal situado sobre el fondo -->
+        <div class="hero-content">
+            <div class="text-container">
+                <h2>Título de Ejemplo</h2>
+                <p>
+                    Este es un párrafo de ejemplo para que puedas rellenar con tu propio contenido más adelante.
+                    Aquí puedes colocar una descripción sobre tu trabajo, proyectos o una breve presentación.
+                </p>
+            </div>
+        </div>
+    </main>
 
     <script type="module" src="script.js"></script>
 </body>

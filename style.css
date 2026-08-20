@@ -1,7 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #111;
+    color: #fff;
 }
 
 /*-- Splash Screen Animada --*/ 
@@ -22,7 +29,6 @@ body, html {
     pointer-events: none;
 }
 
-
 .splash-screen.animate {
     animation: reveal 0.5s ease-in-out forwards;
 }
@@ -37,5 +43,141 @@ body, html {
         /* Aumentamos el ancho y alto a un tamaño mayor que la pantalla */
         width: 300vmax;
         height: 300vmax;
+    }
+}
+
+/*-- Header --*/
+
+.header {
+    width: 100%;
+    height: 5em;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/*-- Sección Principal (Cuerpo con imagen de fondo) --*/
+
+.main-section {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 5em);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1a1a1a; /* Color base o respaldo si no hay imagen */
+}
+
+/* Imagen de fondo a pantalla completa */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Capa de oscurecimiento con gradiente suave para garantizar contraste */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
+    z-index: 2;
+}
+
+/* Contenedor del contenido situado sobre el fondo */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Posiciona el bloque hacia la mitad derecha */
+}
+
+.text-container {
+    width: 50%;
+    padding-left: 3em;  /* Margen de 3em respecto al centro de la pantalla */
+    padding-right: 3em; /* Margen de 3em respecto al borde derecho de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container h2 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5em 0;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.text-container p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Adaptabilidad a pantallas pequeñas / móviles */
+@media (max-width: 768px) {
+    .main-section {
+        min-height: calc(100vh - 5em);
+        padding: 3em 0;
+    }
+
+    .hero-content {
+        justify-content: center;
+    }
+
+    .text-container {
+        width: 100%;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        text-align: center;
+    }
+
+    .text-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-buttons {
+        gap: 0.8em;
+    }
+    
+    .nav-btn {
+        padding: 0.4em 0.6em;
+        font-size: 0.9rem;
     }
 }
