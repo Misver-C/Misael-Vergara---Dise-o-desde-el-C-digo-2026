@@ -51,10 +51,15 @@ body, html {
 .header {
     width: 100%;
     height: 5em;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-buttons {
@@ -62,6 +67,10 @@ body, html {
     gap: 2em;
     align-items: center;
     justify-content: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
 }
 
 .nav-btn {
@@ -75,6 +84,10 @@ body, html {
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .nav-btn:hover {
@@ -82,7 +95,7 @@ body, html {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/*-- Sección Principal (Cuerpo con imagen de fondo) --*/
+/*-- Sección Principal (Cuerpo con imagen de fondo y parallax) --*/
 
 .main-section {
     position: relative;
@@ -91,30 +104,35 @@ body, html {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: #1a1a1a; /* Color base o respaldo si no hay imagen */
+    background-color: #1a1a1a;
 }
 
-/* Imagen de fondo a pantalla completa */
+/* Imagen de fondo a pantalla completa con soporte de Parallax y Blur */
 .hero-bg-img {
     position: absolute;
-    top: 0;
+    top: -10%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 125%; /* Altura extra para cubrir el desplazamiento del parallax */
     object-fit: cover;
     object-position: center;
     z-index: 1;
+    will-change: transform, filter;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0px);
 }
 
-/* Capa de oscurecimiento con gradiente suave para garantizar contraste */
+/* Capa de oscurecimiento con gradiente suave */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.8));
     z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.1s ease-out;
 }
 
 /* Contenedor del contenido situado sobre el fondo */
@@ -150,6 +168,34 @@ body, html {
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 
+/*-- Sección de contenido inferior para permitir scroll continuo --*/
+
+.content-section {
+    position: relative;
+    z-index: 4;
+    background-color: #111;
+    padding: 4em 3em;
+    min-height: 60vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-container h3 {
+    font-size: 2rem;
+    margin-bottom: 0.8em;
+    color: #fff;
+}
+
+.content-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #a0a0a0;
+}
+
 /* Adaptabilidad a pantallas pequeñas / móviles */
 @media (max-width: 768px) {
     .main-section {
@@ -170,6 +216,10 @@ body, html {
 
     .text-container h2 {
         font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 3em 1.5em;
     }
 
     .nav-buttons {

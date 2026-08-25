@@ -13,20 +13,19 @@
     <!-- Header / Barra de navegación -->
     <header class="header">
         <nav class="nav-buttons">
-            <button class="nav-btn">Inicio</button>
-            <a href="intereses.html"><button class="nav-btn">Intereses</button></a>
-            <a href="proyectos.html"><button class="nav-btn">Proyectos</button></a>
-            <a href="https://wiki.ead.pucv.cl/Misael_Vergara"><button class="nav-btn">Wiki</button></a>
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="encargos.html" class="nav-btn">Encargos</a>
+            <a href="proyectos.html" class="nav-btn">Proyectos</a>
+            <a href="https://wiki.ead.pucv.cl/Misael_Vergara" class="nav-btn" target="_blank" rel="noopener noreferrer">Wiki</a>
         </nav>
     </header>
 
-    <!-- Sección principal / Cuerpo con imagen de fondo -->
+    <!-- Sección principal / Hero con parallax y blur en imagen de fondo -->
     <main class="main-section">
-        <!-- Imagen de fondo que cubre todo el ancho y alto de la sección -->
-        <!-- Reemplaza "tu-imagen.jpg" por el nombre de tu archivo de imagen -->
-        <img class="hero-bg-img" src="/assets/fondo.png" alt="Fondo" onerror="this.style.display='none'">
+        <!-- Imagen de fondo que cubre todo el ancho y alto -->
+        <img class="hero-bg-img" src="assets/fondo.png" alt="Fondo" onerror="this.style.display='none'">
         
-        <!-- Capa de superposición para mejorar el contraste y legibilidad del texto -->
+        <!-- Capa de superposición para contraste -->
         <div class="hero-overlay"></div>
 
         <!-- Contenido principal situado sobre el fondo -->
@@ -39,6 +38,16 @@
             </div>
         </div>
     </main>
+
+    <!-- Sección de contenido siguiente para permitir el scroll natural -->
+    <section class="content-section">
+        <div class="content-container">
+            <h3>Sobre mi trabajo</h3>
+            <p>
+                Explora mis encargos, proyectos y procesos creativos vinculando el diseño con el código y la experimentación digital.
+            </p>
+        </div>
+    </section>
 
     <script type="module" src="script.js"></script>
 </body>
