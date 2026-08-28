@@ -233,7 +233,6 @@ body, html {
 
 /* Efecto hover: se agranda ligeramente sobre la pantalla para ampliar la vista */
 .encargo-card:hover {
-    encargo-card: 1em 1em;
     box-shadow: -1.5em 1.5em 0px #000000;
     transform: scale(1.08);
     z-index: 20;
