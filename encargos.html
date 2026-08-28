@@ -47,18 +47,132 @@
                 A continuación se recopilan las entregas y ejercicios desarrollados a lo largo del semestre en Diseño desde el Código.
             </p>
 
+            <!-- Cortina Desplegable de Ejecución de Código -->
+            <div id="code-curtain" class="code-curtain" aria-hidden="true">
+                <div class="curtain-header">
+                    <div class="curtain-title-group">
+                        <span class="curtain-live-dot"></span>
+                        <h4 id="curtain-title" class="curtain-title">Encargo 03: Traducción de Imagen a HTML & CSS</h4>
+                    </div>
+                    <div class="curtain-controls">
+                        <span class="curtain-hint">Maquetación exacta con HTML5 y CSS3</span>
+                        <button id="close-curtain-btn" class="curtain-close-btn" aria-label="Cerrar cortina">
+                            ▲ Cerrar cortina ✕
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="curtain-viewport">
+                    <!-- Traducción completa en lenguaje HTML de la imagen DISE UDEC -->
+                    <div id="curtain-html-demo" class="curtain-html-demo">
+                        <div class="dise-wrapper">
+                            
+                            <!-- Sección Superior -->
+                            <div class="dise-top-section">
+                                <!-- Columna Izquierda: Introducción y Botón -->
+                                <div class="dise-intro">
+                                    <h2 class="dise-main-title">Dirección de Servicios<br>Estudiantiles</h2>
+                                    <div class="dise-orange-bar"></div>
+                                    <p class="dise-intro-text">
+                                        El trabajo <strong>colaborativo, sistemático y permanente en investigación y creación</strong>, realizado en la Universidad de Concepción, es una forma válida de alcanzar altos niveles de <strong>calidad y pertinencia</strong>.
+                                    </p>
+                                    <a href="https://dise.udec.cl/" target="_blank" rel="noopener noreferrer" class="dise-btn">
+                                        Conocer más
+                                        <svg class="dise-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <!-- Columna Derecha: Grilla 2x2 de tarjetas -->
+                                <div class="dise-cards-grid">
+                                    <!-- Tarjeta 1 -->
+                                    <div class="dise-card">
+                                        <div class="dise-card-tag">
+                                            <span class="dise-tag-square"></span>
+                                            <span>Deportes</span>
+                                        </div>
+                                        <h3 class="dise-card-title">Actividades masivas y recreativas</h3>
+                                    </div>
+
+                                    <!-- Tarjeta 2 -->
+                                    <div class="dise-card">
+                                        <div class="dise-card-tag">
+                                            <span class="dise-tag-square"></span>
+                                            <span>Salud</span>
+                                        </div>
+                                        <h3 class="dise-card-title">Recepción de certificados médicos</h3>
+                                    </div>
+
+                                    <!-- Tarjeta 3 -->
+                                    <div class="dise-card">
+                                        <div class="dise-card-tag">
+                                            <span class="dise-tag-square"></span>
+                                            <span>Bienestar Estudiantil</span>
+                                        </div>
+                                        <h3 class="dise-card-title">Tarjeta Nacional Estudiantil</h3>
+                                    </div>
+
+                                    <!-- Tarjeta 4 -->
+                                    <div class="dise-card">
+                                        <div class="dise-card-tag">
+                                            <span class="dise-tag-square"></span>
+                                            <span>Actividades extraprogramáticas</span>
+                                        </div>
+                                        <h3 class="dise-card-title">Cursos Artísticos y Culturales de libre participación</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección Inferior: Banner Talleres Deportivos con Imagen Exacta -->
+                            <div class="dise-banner-card">
+                                <div class="dise-banner-info">
+                                    <div class="dise-banner-tag">
+                                        <span class="dise-banner-tag-square"></span>
+                                        <span>Unidad de Deportes DISE</span>
+                                    </div>
+                                    <h2 class="dise-banner-title">Talleres deportivos</h2>
+                                    <div class="dise-slate-bar"></div>
+                                    <p class="dise-banner-text">
+                                        Esta Unidad es la encargada de generar instancias deportivas, recreativas y de actividades masivas de integración para la formación integral y de excelencia. Su objetivo principal es entregar a los y las estudiantes las herramientas necesarias para su desarrollo integral al interior de la Universidad y ser la fuente motivadora y precursora de cambios positivos tanto en el aspecto físico como en el mental, a través de difusión o promoción de estilos de vida saludables.
+                                    </p>
+                                    <a href="https://dise.udec.cl/deportes" target="_blank" rel="noopener noreferrer" class="dise-btn dise-banner-btn">
+                                        Visita nuestros talleres
+                                        <svg class="dise-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="dise-banner-img-wrapper">
+                                    <img src="assets/deportes.png" alt="Talleres Deportivos UDEC" class="dise-banner-img">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Canvas opcional para demos de dibujo -->
+                    <canvas id="curtain-canvas" style="display: none;"></canvas>
+                </div>
+
+                <div class="curtain-footer">
+                    <span id="curtain-info-text">Traducción fiel de interfaz a HTML5 & CSS3 — DISE Universidad de Concepción</span>
+                    <button id="close-curtain-footer-btn" class="curtain-action-btn">Cerrar cortina</button>
+                </div>
+            </div>
+
             <!-- Galería de 3 columnas (ordenada de izquierda a derecha) -->
             <div class="encargos-grid">
                 
                 <!-- Encargo 01 -->
-                <a href="https://wiki.ead.pucv.cl/Misael_Vergara" target="_blank" rel="noopener noreferrer" class="encargo-card">
+                <a href="https://wiki.ead.pucv.cl/Encargo_1/_Misael_Vergara/Dis._Desde_el_c%C3%B3digo_2026." target="_blank" rel="noopener noreferrer" class="encargo-card">
                     <div class="encargo-img-wrapper">
                         <span class="encargo-badge">Encargo 01</span>
-                        <!-- Cuando tengas la imagen, descomenta la siguiente línea: -->
-                        <!-- <img src="assets/encargo1.png" alt="Encargo 01"> -->
                         <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Estructura Web & Splash</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
+                            <span class="encargo-placeholder-title">Creación del HTML</span>
+                            <span class="encargo-placeholder-sub">Se crea y construye el primer prototipo</span>
                         </div>
                     </div>
                     <div class="encargo-footer">
@@ -68,13 +182,12 @@
                 </a>
 
                 <!-- Encargo 02 -->
-                <a href="https://wiki.ead.pucv.cl/Misael_Vergara" target="_blank" rel="noopener noreferrer" class="encargo-card">
+                <a href="https://wiki.ead.pucv.cl/Encargo_2/_Misael_Vergara/Dis._Desde_el_C%C3%B3digo_2026" target="_blank" rel="noopener noreferrer" class="encargo-card">
                     <div class="encargo-img-wrapper">
                         <span class="encargo-badge">Encargo 02</span>
-                        <!-- <img src="assets/encargo2.png" alt="Encargo 02"> -->
                         <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Scroll Parallax & Blur</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
+                            <span class="encargo-placeholder-title">Incorporación de tres HTML</span>
+                            <span class="encargo-placeholder-sub">Se incorporan archivos HTML independientes </span>
                         </div>
                     </div>
                     <div class="encargo-footer">
@@ -83,67 +196,17 @@
                     </div>
                 </a>
 
-                <!-- Encargo 03 -->
-                <a href="#" class="encargo-card">
+                <!-- Encargo 03 (Despliega la traducción de la imagen en HTML) -->
+                <div class="encargo-card code-trigger" data-demo="traduccion-imagen" data-title="Encargo 03: Traducción de imagen a HTML & CSS" role="button" tabindex="0">
                     <div class="encargo-img-wrapper">
                         <span class="encargo-badge">Encargo 03</span>
-                        <!-- <img src="assets/encargo3.png" alt="Encargo 03"> -->
-                        <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Próxima entrega</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
-                        </div>
+                        <img src="assets/encargo3-preview.png" alt="Traducción de imagen DISE UDEC">
                     </div>
                     <div class="encargo-footer">
-                        <h4 class="encargo-title">Encargo 03: Por definir</h4>
-                        <span class="encargo-link-text">Próximamente →</span>
+                        <h4 class="encargo-title">Encargo 03: Traducción</h4>
+                        <span class="encargo-link-text code-action">Desplegar HTML ▼</span>
                     </div>
-                </a>
-
-                <!-- Encargo 04 -->
-                <a href="#" class="encargo-card">
-                    <div class="encargo-img-wrapper">
-                        <span class="encargo-badge">Encargo 04</span>
-                        <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Próxima entrega</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
-                        </div>
-                    </div>
-                    <div class="encargo-footer">
-                        <h4 class="encargo-title">Encargo 04: Por definir</h4>
-                        <span class="encargo-link-text">Próximamente →</span>
-                    </div>
-                </a>
-
-                <!-- Encargo 05 -->
-                <a href="#" class="encargo-card">
-                    <div class="encargo-img-wrapper">
-                        <span class="encargo-badge">Encargo 05</span>
-                        <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Próxima entrega</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
-                        </div>
-                    </div>
-                    <div class="encargo-footer">
-                        <h4 class="encargo-title">Encargo 05: Por definir</h4>
-                        <span class="encargo-link-text">Próximamente →</span>
-                    </div>
-                </a>
-
-                <!-- Encargo 06 -->
-                <a href="#" class="encargo-card">
-                    <div class="encargo-img-wrapper">
-                        <span class="encargo-badge">Encargo 06</span>
-                        <div class="encargo-placeholder">
-                            <span class="encargo-placeholder-title">Próxima entrega</span>
-                            <span class="encargo-placeholder-sub">Previsualización 4:3</span>
-                        </div>
-                    </div>
-                    <div class="encargo-footer">
-                        <h4 class="encargo-title">Encargo 06: Por definir</h4>
-                        <span class="encargo-link-text">Próximamente →</span>
-                    </div>
-                </a>
-
+                </div>
             </div>
         </div>
     </section>
