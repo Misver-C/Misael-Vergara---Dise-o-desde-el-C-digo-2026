@@ -1,7 +1,8 @@
-/* ==========================================================================
-   ESTILOS DEDICADOS - ENCARGO 03: TRADUCCIÓN DISE UDEC
-   Archivo independiente para aislar el CSS del resto del sitio.
-   ========================================================================== */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+}
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #f4f5f7;
     color: #1e293b;
     min-height: 100vh;

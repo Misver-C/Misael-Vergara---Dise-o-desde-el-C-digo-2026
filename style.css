@@ -143,6 +143,14 @@ body, html {
     justify-content: flex-end; /* Posiciona el bloque hacia la mitad derecha */
 }
 
+.hero-gif {
+    position: fixed;
+    left: 15em;
+    top: 15em;
+    width: 20em;
+    height: auto;
+}
+
 .text-container {
     width: 50%;
     padding-left: 3em;  /* Margen de 3em respecto al centro de la pantalla */
